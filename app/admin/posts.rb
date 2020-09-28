@@ -7,6 +7,15 @@ ActiveAdmin.register Post do
 
   scope :published
 
+  member_action :publish, method: :put do
+    resource.publish!
+    redirect_to resource_path, notice: "Published!"
+  end
+
+  action_item :publish, only: :show, if: proc { !resource.published? } do
+    link_to 'Publish', [:publish, :admin, resource], method: :put
+  end
+
   index do
     selectable_column
     column :id
@@ -15,5 +24,6 @@ ActiveAdmin.register Post do
     column :created_at
     actions
   end
+  
   
 end
