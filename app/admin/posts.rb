@@ -24,6 +24,14 @@ ActiveAdmin.register Post do
     column :created_at
     actions
   end
-  
-  
+
+  permit_params :title, :body, :author_id, category_ids: []
+
+  form do |f|
+    f.inputs :title, :body, :author
+    f.inputs "Categories" do
+      f.input :categories, as: :check_boxes
+    end
+    actions
+  end
 end
