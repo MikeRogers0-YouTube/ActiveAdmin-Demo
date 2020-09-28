@@ -30,7 +30,7 @@ gem 'devise'
 gem 'activeadmin'
 
 # Decorator
-# gem 'draper'
+gem 'draper'
 
 # Timesaving gems
 gem 'active_record-events'

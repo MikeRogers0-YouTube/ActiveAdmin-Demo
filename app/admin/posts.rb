@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  decorate_with PostDecorator
 
   filter :title
   filter :author
