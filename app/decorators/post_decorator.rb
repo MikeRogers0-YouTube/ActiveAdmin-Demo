@@ -4,5 +4,4 @@ class PostDecorator < ApplicationDecorator
   def body
     helpers.simple_format(object.body)
   end
-
 end

@@ -125,7 +125,7 @@ ActiveAdmin.setup do |config|
   #
   # You can completely disable comments:
   # config.comments = false
-  #
+   
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
   #
@@ -134,8 +134,8 @@ ActiveAdmin.setup do |config|
   # config.comments_order = 'created_at ASC'
   #
   # You can disable the menu item for the comments index page:
-  # config.comments_menu = false
-  #
+  config.comments_menu = false
+  
   # You can customize the comment menu:
   # config.comments_menu = { parent: 'Admin', priority: 1 }
 
@@ -143,7 +143,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  config.batch_actions = false
 
   # == Controller Filters
   #
@@ -290,8 +290,8 @@ ActiveAdmin.setup do |config|
   # to the value of config.maximum_association_filter_arity).
   # You can enabled or disable the inclusion
   # of those filters by default here.
-  #
-  # config.include_default_association_filters = true
+   
+  config.include_default_association_filters = false
 
   # config.maximum_association_filter_arity = 256 # default value of :unlimited will change to 256 in a future version
   # config.filter_columns_for_large_association = [

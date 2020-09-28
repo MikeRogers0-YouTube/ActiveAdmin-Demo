@@ -1,8 +1,9 @@
 ActiveAdmin.register Post do
+  includes :author
   decorate_with PostDecorator
 
   filter :title
-  filter :author
+  filter :author_name, as: :string
   filter :created_at
   filter :categories
 
@@ -26,6 +27,16 @@ ActiveAdmin.register Post do
     actions
   end
 
+  permit_params :title, :body, :author_id, category_ids: []
+
+  form do |f|
+    f.inputs :title, :body, :author
+    f.inputs "Categories" do
+      f.input :categories, as: :check_boxes
+    end
+    actions
+  end
+
   show do
     attributes_table do
       row :title
@@ -37,15 +48,5 @@ ActiveAdmin.register Post do
       row :categories
     end
     active_admin_comments
-  end
-  
-  permit_params :title, :body, :author_id, category_ids: []
-
-  form do |f|
-    f.inputs :title, :body, :author
-    f.inputs "Categories" do
-      f.input :categories, as: :check_boxes
-    end
-    actions
   end
 end
