@@ -25,6 +25,19 @@ ActiveAdmin.register Post do
     actions
   end
 
+  show do
+    attributes_table do
+      row :title
+      row :body
+      row :author
+      row :created_at
+      row :updated_at
+      row :published_at
+      row :categories
+    end
+    active_admin_comments
+  end
+  
   permit_params :title, :body, :author_id, category_ids: []
 
   form do |f|
