@@ -22,6 +22,7 @@ ActiveAdmin.register Post do
     selectable_column
     column :id
     column :title
+    column :published?
     column :author
     column :created_at
     actions
