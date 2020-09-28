@@ -26,8 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'image_processing', '~> 1.2'
 
 # Admin Panel
-# gem 'devise'
-# gem 'activeadmin'
+gem 'devise'
+gem 'activeadmin'
 
 # Decorator
 # gem 'draper'
