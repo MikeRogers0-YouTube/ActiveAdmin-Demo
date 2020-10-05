@@ -1,6 +1,12 @@
 # ActiveAdmin - Demo Repo
 
-This is the sample repo for [Admin Panels In Ruby On Rails](https://www.youtube.com/watch?v=QBzOZxRVfs8&feature=youtu.be).
+This is the sample repo for [Admin Panels In Ruby On Rails](https://mikerogers.io/2020/10/05/active-active-video).
+
+## Videos
+
+* [Part 1 (Set up ActiveAdmin)](https://www.youtube.com/watch?v=QBzOZxRVfs8)
+* [Part 2 (Resources, Filters & Scopes)](https://www.youtube.com/watch?v=5tCWXSaTfUI)
+* [Part 3 (Custom Actions & Decorators)](https://www.youtube.com/watch?v=ZuF6M3s-hq0)
 
 ## Setup & Running Locally
 
